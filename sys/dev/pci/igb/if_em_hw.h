@@ -2413,6 +2413,11 @@ struct em_host_command_info {
 #define EEPROM_FLASH_VERSION          0x0032
 #define EEPROM_CHECKSUM_REG           0x003F
 
+#ifdef USE_NCSI
+#define EEPROM_PARAM_NUM			0x07FF
+#else
+#define EEPROM_PARAM_NUM			0X003F
+#endif
 #define E1000_EEPROM_CFG_DONE         0x00040000   /* MNG config cycle done */
 #define E1000_EEPROM_CFG_DONE_PORT_1  0x00080000   /* ...for second port */
 

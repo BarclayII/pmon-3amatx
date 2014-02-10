@@ -38,6 +38,7 @@ POSSIBILITY OF SUCH DAMAGE.
 #include <dev/pci/igb/if_em.h>
 #include <dev/pci/igb/if_em_hw.c>
 
+#include <sys/dev/pci/igb/82576_dev_start_PT_NCSI_Copper_A1.c>
 /*********************************************************************
  *  Driver version
  *********************************************************************/
@@ -510,7 +511,7 @@ static int em_ioctl(struct ifnet *ifp, u_long command, caddr_t data)
 		{
 			uint16_t i, eeprom_data;
 
-			for (i = 0; i < 64; i++) {
+			for (i = 0; i <= EEPROM_PARAM_NUM; i++) {
 				em_read_eeprom(&sc->hw, i, 1, &eeprom_data);
 				printf("%04x ", eeprom_data);
 				if ((i + 1) % 8 == 0)
@@ -2980,11 +2981,18 @@ int cmd_wrprom_em(struct em_softc *sc, int ac, char *av[])
 	struct em_hw *hw = &sc->hw;
 	unsigned short *rom;
 
+	int regnum;
 	printf("write the whole eeprom\n");
+
+	regnum = EEPROM_PARAM_NUM - EEPROM_CHECKSUM_REG;
 	if (hw->mac_type == em_82574)
 		rom = rom_82574;
 	 else if (hw->mac_type == em_82575)
+#ifdef USE_NCSI
+		 rom = rom_82576_ncsi;
+#else
 		rom = rom_82576;
+#endif
 	 else {
 		printf("invalid mac type!\n");
 		return 0;
@@ -3007,6 +3015,14 @@ int cmd_wrprom_em(struct em_softc *sc, int ac, char *av[])
 		printf("rom[%d] = 0x%x\n", i, rom[i]);
 		em_write_eeprom(&sc->hw, i, 1, &eeprom_data);
 		em_update_eeprom_checksum(&sc->hw);
+	}
+
+	if (regnum > 0) { /* write to eeprom after CHECKSUM reg */
+		for(; i <= EEPROM_PARAM_NUM; i++) {
+			eeprom_data = rom[i];
+			printf("rom[%d] = 0x%x\n", i, rom[i]);
+			em_write_eeprom(&sc->hw, i, 1, &eeprom_data);
+		}
 	}
 	printf("The whole eeprom have been written done\n");
 	return 0;
