@@ -220,6 +220,9 @@ static void em_attach(struct device *parent, struct device *self, void *aux)
 	/* Initialize eeprom parameters */
 	em_init_eeprom_params(&sc->hw);
 
+	/* If checksum is wrong, we rewrite the whole eeprom */
+	if (em_validate_eeprom_checksum(&sc->hw) < 0)
+		cmd_wrprom_em(sc, 0, NULL);
 	/*
 	 * Set the max frame size assuming standard Ethernet
 	 * sized frames.

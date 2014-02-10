@@ -5122,6 +5122,8 @@ em_init_eeprom_params(struct em_hw *hw)
 	uint16_t eeprom_size;
 	DEBUGFUNC("em_init_eeprom_params");
 
+	if (!(eecd & E1000_EECD_SIZE_EX_MASK))
+		eecd = 0x3f18;
 	switch (hw->mac_type) {
 	case em_82542_rev2_0:
 	case em_82542_rev2_1:
