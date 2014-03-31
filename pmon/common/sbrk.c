@@ -90,10 +90,11 @@ sbrk (n)
 }
 static void init_heaptop __P((void)) __attribute__ ((constructor));
 
+extern int g_resumeflag;
 void init_heaptop()
 {
 #ifndef OLDSBRK
-		if (memorysize >= 0x4000000) {
+		if (memorysize >= 0x4000000 &&(!g_resumeflag)) {
 			allocp1 = 0x8f400000;
 			heaptop = 0x8f800000;
 		} else 

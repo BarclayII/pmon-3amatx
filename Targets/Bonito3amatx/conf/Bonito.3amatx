@@ -45,6 +45,7 @@ option      BONITO_33M
 #option      BONITO_25M
 #option      BONITO_50M
 
+option	RESUME_AFTER_COPY
 option  LOONGSON_3ASINGLE
 option	LOONGSON_3AMATX
 option		BOOT_PARAM

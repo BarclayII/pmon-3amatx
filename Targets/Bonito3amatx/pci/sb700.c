@@ -62,6 +62,18 @@ static void set_pmio_enable_bits(device_t sm_dev, u32 reg_pos,
 	}
 }
 
+void pmio_enable_bits(u32 reg_pos,
+				 u32 mask, u32 val)
+{
+	u8 reg_old, reg;
+	reg = reg_old = pm_ioread(reg_pos);
+	reg &= ~mask;
+	reg |= val;
+	if (reg != reg_old) {
+		pm_iowrite(reg_pos, reg);
+	}
+}
+
 void sb700_sata(int enabled)
 {
 	device_t sm_dev;
@@ -176,4 +188,52 @@ void sb700_enable()
 	sb700_lpc(1);
 	//sb700_aci(_pci_make_tag(0, 0x14, 5), 1);
 	//sb700_mci(_pci_make_tag(0, 0x14, 6), 1);
+}
+
+#define SB700_ACPI_IO_BASE ( 0x800)
+#define SB700_ACPI_IO_SIZE ( 0x100)
+
+#define ACPI_PM_EVT_BLK		(SB700_ACPI_IO_BASE + 0x00) /* 4 bytes */
+#define ACPI_PM1_CNT_BLK		(SB700_ACPI_IO_BASE + 0x04) /* 2 bytes */
+#define ACPI_PMA_CNT_BLK		(SB700_ACPI_IO_BASE + 0x0F) /* 1 byte */
+#define ACPI_PM_TMR_BLK		(SB700_ACPI_IO_BASE + 0x18) /* 4 bytes */
+#define ACPI_GPE0_BLK			(SB700_ACPI_IO_BASE + 0x10) /* 8 bytes */
+#define ACPI_END				(SB700_ACPI_IO_BASE + 0x80)
+int sb700_acpi_init(void)
+{
+	unsigned int temp32;
+	int loop;
+	unsigned int PM_IO_BASE;
+	device_t acpi_tag;
+	acpi_tag = _pci_make_tag(0, 20, 0);
+	PM_IO_BASE = _pci_conf_read(acpi_tag, 0x9c);
+	/* pm1 base */
+	pm_iowrite(0x22, ACPI_PM1_CNT_BLK & 0xff);
+	pm_iowrite(0x23, ACPI_PM1_CNT_BLK >> 8);
+
+	/* gpm base */
+	pm_iowrite(0x28, ACPI_GPE0_BLK & 0xFF);
+	pm_iowrite(0x29, ACPI_GPE0_BLK >> 8);
+
+	/* gpm base */
+	pm_iowrite(0x2e, ACPI_END & 0xFF);
+	pm_iowrite(0x2f, ACPI_END >> 8);
+
+	/* io decode */
+	pm_iowrite(0x0E, 1<<3 | 0<<2); /* AcpiDecodeEnable, When set, SB uses
+									* the contents of the PM registers at
+									* index 20-2B to decode ACPI I/O address.
+									* AcpiSmiEn & SmiCmdEn
+									*/
+	/* SLP_SMI_EN */
+	pmio_enable_bits(0x04,0x1<<7,0x00);
+	/* SlpS3ToLdtPwrGdEn */
+	pmio_enable_bits(0x41,0x1<<3,0x1<<3);
+	/* LongSlpS3 */
+	pmio_enable_bits(0x8d,0x1<<5,0x1<<5);
+
+	/* SCI_EN set P225 */
+	OUTW(1, ACPI_PM1_CNT_BLK);
+	OUTW(5<<10,ACPI_PM1_CNT_BLK);
+	OUTW(1<<13,ACPI_PM1_CNT_BLK);
 }

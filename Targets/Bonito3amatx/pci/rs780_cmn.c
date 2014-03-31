@@ -125,9 +125,10 @@ u32 _pci_conf_readn(device_t tag, int reg, int width)
 {
 	int bus, device, function;
 
+	_pci_break_tag (tag, &bus, &device, &function);
 	if ((width != 4) || (reg & 3) || reg < 0 || reg >= 0x100) {
-	printk("_pci_conf_readn: bad reg 0x%x, tag 0x%x, width 0x%x\n", reg, tag, width);
-	return ~0;
+		printk("_pci_conf_readn:Bus %d,device %d,function %d bad reg 0x%x, tag 0x%x, width 0x%x\n",bus,device,function, reg, tag, width);
+		return ~0;
 	}
 
 	_pci_break_tag (tag, &bus, &device, &function);

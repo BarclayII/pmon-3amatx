@@ -461,6 +461,19 @@ LEAF(CPU_SetSR)
 	nop
 END(CPU_GetCOUNT)
 
+/*  Modify CONFIG value, arg 1 = set bits, arg 2 = clear bits.
+ */
+LEAF(CPU_SetCONFIG)
+	mfc0	v0, COP_0_CONFIG
+	not	v1, a1
+	and	v1, v0
+	or	v1, a0
+	mtc0	v1, COP_0_CONFIG
+	NOP8
+	j	ra
+	nop
+END(CPU_SetCONFIG)
+
 /*
  *  Get configuration register contents.
  */

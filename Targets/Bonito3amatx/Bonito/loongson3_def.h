@@ -14,6 +14,30 @@
 #define	PRINTSTR(x) \
     .rdata;98: .asciz x; .text; la a0, 98b; bal stringserial; nop
 
+#define SBSB(x)\
+	li t0,x;\
+	li v0,0xbfe001e0;\
+	sb t0,0x0(v0);\
+	nop;
+
+/* Delay macro */
+#define	DELAY(count)	\
+		li v0, count;	\
+		99:			\
+		bnez	v0, 99b;\
+		addiu	v0, -1
+
+/* str need */
+#define STR_XBAR_CONFIG_NODE_a0(OFFSET, BASE, MASK, MMAP) \
+		daddi	v0, t0, OFFSET;		\
+		dli		t1, BASE;			\
+		or		t1, t1, a0;			\
+		sd		t1, 0x00(v0);		\
+		dli		t1, MASK;			\
+		sd		t1, 0x40(v0);		\
+		dli		t1, MMAP;			\
+		sd		t1, 0x80(v0);
+
 #ifdef DEVBD2F_SM502
 #define GPIOLED_DIR  0xe
 #else
@@ -28,7 +52,7 @@ lw v1,4(v0); \
 or v1,0xf; \
 xor v1,GPIOLED_DIR; \
 sw v1,4(v0); \
-li v1,(~x)&0xf;\
+li v1,x;\
 sw v1,0(v0);\
 li v1,0x1000;\
 78: \

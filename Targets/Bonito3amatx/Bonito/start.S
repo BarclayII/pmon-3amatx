@@ -149,7 +149,148 @@ ext_map_and_reboot:
 
 	/* Debug exception */
 	.align  7           /* bfc00480 */
-#include "exc_ejtag.S"
+//#include "exc_ejtag.S"
+
+	/* str debug */
+    .align  8            /* bfc00500*/
+
+#if 1
+	/*************************************************************************
+	/* This Code Must Be Execute Before Memory SelfRefresh Begain,
+	/* Because Once We Enter SelfRefresh Mode,Memory Can't Be Accessed Any More
+	/* We Leave Poweroff Op Later(After Enter SelfRefresh Mode)
+	**************************************************************************/
+#if 0 //consider kernel
+		la v0,prepare_poweroff
+		jalr v0
+		nop
+#endif
+	/* Save Resume Flag */
+	li  t0,0xa000c010
+	li  t1,0x12345678
+	sw  t1,0x0(t0)
+
+1:	lui t0, 0xbfe0  /* Enable DDR control register  */
+	lw  t1, 0x0180(t0)
+	nop
+	li  t2, 0xfffffeff
+	and t1, t1, t2
+	sw  t1, 0x0180(t0)
+	sync
+
+	.set mips64
+	li  a0,0x0
+	dli t0, 0x900000003ff00000
+
+	STR_XBAR_CONFIG_NODE_a0(0x10, \
+					0x0000000000000000, \
+					0xfffffffff0000000, \
+					0x00000000000000f0)
+	dli a0, 0x900000000ff00000
+	ld  t1, 0x30(a0)
+	dli t3, 0x0000000100000000
+	or  t1, t1, t3  /* bit32 for self refresh*/
+	sd  t1, 0x30(a0)
+	sync
+
+	li  a0,0x0
+	dli t0, 0x900000003ff00000
+
+	STR_XBAR_CONFIG_NODE_a0(0x10, \
+					0x0000000000000000, \
+					0xfffffffff0000000, \
+					0x00000000000000f1)
+	dli a0, 0x900000000ff00000
+	ld  t1, 0x30(a0)
+	dli t3, 0x0000000100000000
+	or  t1, t1, t3  /* bit32 for self refresh*/
+	sd  t1, 0x30(a0)
+	sync
+
+/* Don't forget to recovery the XbarII config Window */
+	li  a0,0x0
+	dli t0, 0x900000003ff00000
+	STR_XBAR_CONFIG_NODE_a0(0x10, \
+					0x0000000000000000, \
+					0xfffffffff0000000, \
+					0x00000000000000f0)
+		sync
+		sync
+		sync
+		sync
+		sync
+
+    /* info ec */
+#ifdef CETC32S
+	li t0,0x1
+	li t1,0xb80000b0
+	sw t0,0x0(t1)
+#endif
+
+	li a0,'S'
+	bal tgt_putchar
+	nop
+	li a0,'3'
+	bal tgt_putchar
+	nop
+
+	/* Enable SB WTD To Shutdown Power */
+	li  v0,0xb8000cd6 /* Get WDT BaseAddr */
+
+	li  t0,0x69
+	sb  t0,0x0(v0)
+	li  t0,0x0
+	sb  t0,0x1(v0)
+
+	SBSB('A')
+	li  v0,0xb8000cd6
+	li  t0,0x6f
+	sb  t0,0x0(v0)
+	lb  a0,0x1(v0)
+	sll a0,8
+
+	SBSB('B')
+	li  v0,0xb8000cd6
+	li  t0,0x6e
+	sb  t0,0x0(v0)
+	lb  t0,0x1(v0)
+	or  a0,t0
+	sll a0,8
+
+	SBSB('C')
+	li  v0,0xb8000cd6
+	li  t0,0x6d
+	sb  t0,0x0(v0)
+	lb  t0,0x1(v0)
+	or  a0,t0
+	sll a0,8
+
+	SBSB('D')
+	li  v0,0xb8000cd6
+	li  t0,0x6c
+	sb  t0,0x0(v0)
+	lb  t0,0x1(v0)
+	or  a0,t0
+	li v1,0x10000
+	beq a0,v1,1f
+	nop
+
+	SBSB('E')
+1:
+	dli v0,0x90000e0000000000
+	or v0,a0
+	li a0,0x85
+	sb a0,0x0(v0)
+
+	li a0,'^'
+	bal tgt_putchar
+	nop
+
+1:
+	b  1b
+	nop
+#endif
+	.set mips3
 
 exc_common:
 	.set 	mips64
@@ -475,7 +616,53 @@ wait_l2_ok:
 	jr      ra
 	nop
 
+	w83627write(0xa,0x30,0x1)
+	w83627write(0xa,0xe4,0x10)
+/* We check whether enter S3 before image copy to memery *
+/* if yes we resume here */
+#ifndef RESUME_AFTER_COPY
+	TTYDBG("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n")
+	TTYDBG("0xa01ffffc = 0x")
+	li t0,0xa01ffffc /* The Addr Store S3 Flag */
+	lw a0,0(t0)
+	move t7,a0
+	bal hexserial
+	nop
+	li t1,0x12345678 /* S3 Flag */
+	bne t7,t1,101f
+	nop
 
+	//mfc0   a0,COP_0_CONFIG
+	//and    a0,a0,~((1<<12) | 3)
+	//or     a0,a0,3
+	//mtc0   a0,COP_0_CONFIG
+
+#if 0
+	TTYDBG("\r\ncheck_str = ")
+	la t5,check_str
+	move    a0, t5
+	bal     hexserial
+	nop
+	TTYDBG("\r\n")
+	li t7,32
+	201:
+	TTYDBG("0x")
+	lw		t6,	0x0(t5)
+	move    a0, t6
+	bal     hexserial
+	nop
+	TTYDBG("\r\n")
+	daddiu  t7, t7, -1
+	daddiu  t5, t5, 0x4
+	bnez    t7, 201b
+	nop
+#endif
+	la v0,check_str
+	jalr v0
+	nop
+101:
+	TTYDBG("\r\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n")
+#endif
 
 	/* cxk */
 ####################################

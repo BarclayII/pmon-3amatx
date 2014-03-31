@@ -1781,6 +1781,38 @@ CPU_IOFlushDCache(addr,size,rw);
 #endif
 }
 
+extern void loongson_suspend_lowlevel(void);
+extern int sb700_acpi_init(void);
+extern void	tgt_putchar (int);
+extern int tgt_printf (const char *fmt, ...);
+extern int g_suspend_resume;
+extern int bios_available;
+void cmos_write64(uint64_t data, unsigned long addr);
+static int cmd_suspend(int argc,char **argv)
+{
+	if(argc!=2)
+	{
+		printf("ErrArg,Use state mem|disk\r\n");
+		return;
+	}
+	if(!strcmp(argv[1],"mem"))
+	{
+
+		cmos_write64(0x55555555,0x50);
+		sb700_acpi_init();
+		kbd_available = 0;
+		vga_available = 0;
+		bios_available = 0;
+		usb_kbd_available = 0;
+		prepare_poweroff();
+		loongson_suspend_lowlevel();
+		*((volatile char *)0xbfe001e0)='R';
+		*((volatile char *)0xbfe001e0)='\r';
+		*((volatile char *)0xbfe001e0)='\n';
+		tgt_printf("Here I Resumed...\r\n");
+		return 1;
+	}
+}
 //----------------------------------
 static const Cmd Cmds[] =
 {
@@ -1818,6 +1850,7 @@ static const Cmd Cmds[] =
 #endif
 #endif
 	{"ifconfig","ifname",0,"ifconig fx0 [up|down|remove|stat|setmac|readrom|setrom|addr [netmask]",cmd_ifconfig,2,99,CMD_REPEAT},
+	{"state","power:S0,S3,S5",0,"power:S0,S3,S5",cmd_suspend,2,99,CMD_REPEAT},
 	{"ifup","ifname",0,"ifup fxp0",cmd_ifup,2,99,CMD_REPEAT},
 	{"ifdown","ifname",0,"ifdown fxp0",cmd_ifdown,2,99,CMD_REPEAT},
 	{"rtlist","",0,"rtlist",cmd_rtlist,0,99,CMD_REPEAT},

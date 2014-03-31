@@ -765,6 +765,10 @@ dbginit (char *adr)
 	SBD_DISPLAY ("SBDD", CHKPNT_SBDD);
 	tgt_devinit();
 
+#if defined(LOONGSON_3AMATX) && defined(RESUME_AFTER_COPY)
+	check_str();
+#endif
+
 #ifdef INET
 	SBD_DISPLAY ("NETI", CHKPNT_NETI);
 	init_net (1);

@@ -68,7 +68,7 @@ sim: clean pmon.bin.c
 	gcc -o zloader  -DSIM zloader.c
 ejtag_rom ejtag_rom1 ejtag_ram rom: clean ${START} zloader.o 
 	gcc  -DSTARTADDR=${GZROMSTARTADDR} -DOUT_FORMAT=\"${OUT_FORMAT}\" -DOUT_ARCH=mips -Umips -E -P ld.script.S  > ld.script
-	${LD} -T ld.script -e start -o gzrom ${START} zloader.o 
+	${LD} -T ld.script -e start -o gzrom ${START} sleep.o zloader.o
 	${CROSS_COMPILE}objcopy -O binary gzrom gzrom.bin
 
 ram: clean startram.o zloader.o 
@@ -80,6 +80,8 @@ ${START}:
 	gcc  -DSTARTADDR=${ROMSTARTADDR} -DOUT_FORMAT=\"${OUT_FORMAT}\" -DOUT_ARCH=mips -Umips -E -P ld.script.S  > ../Targets/${TARGET}/conf/ld.script
 	make -C ../Targets/${TARGET}/compile/${TARGETEL}/
 	cp ../Targets/${TARGET}/compile/${TARGETEL}/${START} .
+
+	@cp ../Targets/${TARGET}/compile/${TARGETEL}/sleep.o .
 
 startram.o:
 	gcc  -DSTARTADDR=${RAMSTARTADDR} -DOUT_FORMAT=\"${OUT_FORMAT}\" -DOUT_ARCH=mips -Umips -E -P ld.script.S  > ld.script
@@ -124,7 +126,7 @@ endif
 cleanall: clean
 	make -C ../Targets/${TARGET}/compile/${TARGETEL}/ clean
 clean:
-	rm -rf *.o zlib_gzip zloader pmon.bin.c gzrom gzrom.bin gzram  initmips.c pmon.bin.gz zlib_deflate/*.o zlib_inflate/*.o zlib_gzrom zlib_gzrom.bin
+	rm -rf *.o zlib_gzip zloader pmon.bin.c gzrom gzrom.bin gzram  initmips.c pmon.bin.gz zlib_deflate ../Targets/${TARGET}/compile/${TARGETEL}/sleep.o /*.o zlib_inflate/*.o zlib_gzrom zlib_gzrom.bin
 cfg:
 	# DO NOT DELETE
 	perl -i -ne 'print;exit if(/^# DO NOT DELETE/);' ../lib/libc/Makefile 

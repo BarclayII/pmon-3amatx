@@ -408,6 +408,8 @@ unsigned char hwethadr[6];
 
 void initmips(unsigned long long  raw_memsz);
 
+void poweroff(void);
+void tgt_poweroff(void);
 void addr_tst1(void);
 void addr_tst2(void);
 void movinv1(int iter, ulong p1, ulong p2);
@@ -633,6 +635,120 @@ void lm93_fan(void)
 pcireg_t _pci_allocate_io(struct pci_device *dev, vm_size_t size);
 static void superio_reinit();
 
+uint64_t cmos_read64(unsigned long addr);
+void cmos_write64(uint64_t data, unsigned long addr);
+
+uint64_t cmos_read64(unsigned long addr)
+{
+	unsigned char bytes[8];
+	int i;
+
+	for(i=0; i<8; i++)
+		bytes[i] = CMOS_READ(addr + i);
+
+	return *(uint64_t *)bytes;
+}
+
+void cmos_write64(uint64_t data, unsigned long addr)
+{
+	int i;
+	unsigned char * bytes = (unsigned char *)&data;
+
+	for(i=0; i<8; i++)
+		CMOS_WRITE(bytes[i], addr + i);
+}
+extern void cmos_write64(uint64_t data, unsigned long addr);
+
+void check_str()
+{
+	uint64_t str_ra, str_sp;
+	unsigned int *addr;
+	int i;
+	str_ra = cmos_read64(0x40);
+	str_sp = cmos_read64(0x48);
+	addr = str_sp | 0xa0000000;
+	tgt_printf("SP=%llx, RA=%llx\n",str_sp,str_ra);
+	if(!str_ra || (0xFFFFFFFFFFFFFFFF == str_ra))
+	{
+		cmos_write64(0x0,0x50);
+		return;
+	}
+#ifdef SUSPEND_DEBUG /* which defined in pmon/arch/mips/sleep.S */
+	for(i=0;i<32;i++)
+	{
+	   tgt_printf("0x%lx = 0x%lx\n",(addr+i),
+			   *(addr+i));
+	}
+#endif
+	tgt_printf("SuperIO ReInit\r\n");
+	superio_reinit();
+	tgt_printf("Interrupt Reallocate\r\n");
+	sb700_interrupt_fixup();
+	tgt_printf("Clean RTC Ram\r\n");
+	cmos_write64(0x0,0x40);
+	cmos_write64(0x0,0x48);
+	tgt_printf("Resume Begin\r\n");
+	/* disable cache */
+	__asm__ __volatile__(
+		"	.set	noat		\n"
+		"	.set	mips64		\n"
+		"	ld	$sp, 0(%0)		\n"
+		"	ld	$v0, 0(%1)		\n"
+		"	jalr	$v0			\n"
+		"	nop					\n"
+		"	.set	at			\n"
+	: /* No outputs */
+	: "r" (&str_sp), "r" (&str_ra));
+}
+
+/* Don't remove this it, see zloader/genrom
+ * The code is same as tgt_poweroff, except the last instruction is removed(Execute Later) */
+void prepare_poweroff()
+{
+	char * watch_dog_base = 0xb8000cd6;
+	char * watch_dog_config  = 0xba00a041;
+	unsigned int * watch_dog_mem = 0xbe010000;
+	unsigned char * reg_cf9 = (unsigned char *)0xb8000cf9;
+
+	delay(100);
+	*reg_cf9 = 4;
+
+	/* enable WatchDogTimer */
+	delay(100);
+	* watch_dog_base  = 0x69;
+	*(watch_dog_base + 1) = 0x0;
+
+	/* set WatchDogTimer base address is 0x10000 */
+	delay(100);
+	* watch_dog_base = 0x6c;
+	*(watch_dog_base + 1) = 0x0;
+
+	delay(100);
+	* watch_dog_base = 0x6d;
+	*(watch_dog_base + 1) = 0x0;
+
+	delay(100);
+	* watch_dog_base = 0x6e;
+	*(watch_dog_base + 1) = 0x1;
+
+	delay(100);
+	* watch_dog_base = 0x6f;
+	*(watch_dog_base + 1) = 0x0;
+
+	delay(100);
+	* watch_dog_config = 0xff;
+
+	/* set WatchDogTimer to starting */
+	delay(100);
+	* watch_dog_mem = 0x05;
+	delay(100);
+	*(watch_dog_mem + 1) = 0x1000;
+	delay(100);
+
+}
+
+int g_resumeflag;
+
 void
 initmips(unsigned long long raw_memsz)
 {
@@ -640,6 +756,11 @@ initmips(unsigned long long raw_memsz)
 	int* io_addr;
     unsigned long long memsz;
 	lm93_fan();
+
+	if (*(int*)0xa000c010 == 0x12345678) {
+		g_resumeflag = 1;
+		*(int*)0xa000c010 = 0;
+	}
 tgt_fpuenable();
 #ifdef DEVBD2F_SM502
 {
@@ -1217,8 +1338,24 @@ outb(BONITO_PCIIO_BASE_VA + 0x002e,0xaa);
 }
 #endif
 #if PCI_IDSEL_SB700 != 0
-static void superio_reinit()
+static void superio_reinit(void)
 {
+	static int cr2c,data;
+	w83627_write(0,0x24,0xc1);
+	data=w83627_read(0xa,0x2d);
+/* ENABLE EN_ACPI? */
+	cr2c = w83627_read(0,0x2c);
+/* ENABLE VSBGATE# */
+	w83627_write(0xa,0x30,1);
+	data=w83627_read(0xa,0x30);
+	data=w83627_read(0xa,0xe4);
+	w83627_write(0xa,0xe4,0x18);
+	data=w83627_read(0xa,0xe4);
+	data=w83627_read(0xa,0xe3);
+	w83627_write(0xa,0xf6,0x5a);
+	data=w83627_read(0xa,0xf6);
+
+
 w83627_write(0,0x24,0xc1);
 w83627_write(5,0x30,1);
 w83627_write(5,0x60,0);
@@ -1628,7 +1765,7 @@ static inline unsigned char CMOS_READ(unsigned char addr)
         unsigned char tmp1,tmp2;
 	volatile int tmp;
 
-#if defined(DEVBD2F_VIA)||defined(DEVBD2F_CS5536)||defined(DEVBD2F_EVA)
+#if defined(DEVBD2F_VIA)||defined(DEVBD2F_CS5536)||defined(DEVBD2F_EVA) || defined(LOONGSON_3AMATX)
 	linux_outb_p(addr, 0x70);
         val = linux_inb_p(0x71);
 #elif defined(DEVBD2F_SM502)
@@ -1718,7 +1855,7 @@ static inline void CMOS_WRITE(unsigned char val, unsigned char addr)
 {
 
 	char a;
-#if defined(DEVBD2F_VIA)||defined(DEVBD2F_CS5536)||defined(DEVBD2F_EVA)
+#if defined(DEVBD2F_VIA)||defined(DEVBD2F_CS5536)||defined(DEVBD2F_EVA) || defined(LOONGSON_3AMATX)
 	linux_outb_p(addr, 0x70);
         linux_outb_p(val, 0x71);
 
@@ -2667,6 +2804,7 @@ char *tran_month(char *c, char *i)
  }
 
 
+#if 0
 int get_update(char *p)
  {
      int i=0;
@@ -2683,6 +2821,21 @@ int get_update(char *p)
 
      return 0;
  }
+#else
+int get_update(char *p)
+{
+	int i = 0;
+	char *t, *mp, m[3];
+	t  = strstr(vers, ":");
+	strncpy(p, t + 2, 4);     /* year */
+	p[4] = '-';
+	strncpy(p + 5,t + 10,2);
+	p[7]='-';
+	strncpy(p + 8, t + 16, 2);   /* day */
+	p[10] = '\0';
+	return 0;
+ }
+#endif
 
 
 /********************************************
@@ -2956,6 +3109,12 @@ void sb700_interrupt_fixup(void)
 	pci_write_config8(dev,0x3c,0x05);
 
 	fixup_interrupt_printf("godson3a fixup: VGA ------> int5 \n");
+
+	/* added to fixup pci bridge card */
+	dev = _pci_make_tag(9, 0x0, 0x0);
+	val = pci_read_config32(dev, 0x00);
+	if ( val != 0xffffffff) /* device on the slot */
+		pci_write_config8(dev, 0x3c, 0x06);
 
 	/*
 	 * 7.2.1 route  00:05:00 (pcie slot) INTA->INTB# -----------------> int3

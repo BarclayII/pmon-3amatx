@@ -315,11 +315,13 @@ static void
 	 */
 	filefs_init(&ramfs);
 
+#if 0
 #if NLOGFILE > 0	
 	addRamFile("logger", 0x3000, 0x1000, RAMFILE_STATIC);
 #endif
 	addRamFile("vmlinux", 0xbc000000, 0x800000, RAMFILE_STATIC);
 	addRamFile("vmlinux1", 0xc0200000, 0xa00000, RAMFILE_CPHY);
 	addRamFile("usermem", (long)CLIENTPC,0x10000000, RAMFILE_STATIC);
+#endif
 }
 
