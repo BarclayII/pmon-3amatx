@@ -142,9 +142,18 @@ printf("net info:\n");
 
 #if defined(LOONGSON_3ASINGLE) || defined( LOONGSON_3BSINGLE)
 
+#ifndef LOONGSON_3AMATX
 printf("RTL8111 rte0 info:\n");
 strcpy(cmd,"ifconfig rte0;ifconfig rte0 status;");
 do_cmd(cmd);
+#else
+printf("82576 igb0 info:\n");
+strcpy(cmd,"ifconfig igb0;ifconfig igb0 status;");
+do_cmd(cmd);
+printf("82576 igb1 info:\n");
+strcpy(cmd,"ifconfig igb1;ifconfig igb1 status;");
+do_cmd(cmd);
+#endif
 
 #else
 #if defined LOONGSON_3ASERVER

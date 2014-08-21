@@ -200,10 +200,14 @@ static inline int cpu_probe_release(void)
 static void board_info(char *board_name)
 {
 #ifdef LOONGSON_3ASINGLE
+#ifndef LOONGSON_3AMATX
 	if(cpu_probe_release())
         	strcpy(board_name, "Loongson-3A5-780E-1w-V1.03-demo");
 	else
         	strcpy(board_name, "Loongson-3A-780E-1w-V1.03-demo");
+#else
+	strcpy(board_name, "Loongson-3A-780E-1w-V1.0-matx");
+#endif
 #endif
 
 #ifdef LOONGSON_3A2H

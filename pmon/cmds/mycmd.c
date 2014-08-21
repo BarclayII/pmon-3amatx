@@ -1142,7 +1142,7 @@ static int cmd_ifconfig(int argc,char **argv)
                 strcpy(argv[1],"syn1");
         }
 #endif
-#if	defined (LOONGSON_3ASINGLE) || defined (LOONGSON_3BSINGLE)
+#if	(defined (LOONGSON_3ASINGLE) && !defined(LOONGSON_3AMATX)) || defined (LOONGSON_3BSINGLE)
         if(strstr(net_type,"eth0")!=NULL)
         {
                 strcpy(argv[1],"rte0");

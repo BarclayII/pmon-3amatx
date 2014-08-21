@@ -121,6 +121,7 @@ static int cmd_set_mac(struct em_softc *sc, int ac, char *av[]);
 static int cmd_wrprom_em(struct em_softc *sc, int ac, char *av[]);
 
 unsigned int after_linkup;
+unsigned char smbios_uuid_igb_mac[6];
 
 /*********************************************************************
  *  OpenBSD Device Interface Entry Points
@@ -170,6 +171,7 @@ static void em_attach(struct device *parent, struct device *self, void *aux)
 	int defer = 0;
 	struct em_hw *hw;
 	int mac1, mac2;
+	int i;
 
 	INIT_DEBUGOUT("em_attach: begin");
 	sc = (struct em_softc *)self;
@@ -355,6 +357,9 @@ static void em_attach(struct device *parent, struct device *self, void *aux)
 	*(int *)(sc->osdep.mem_bus_space_handle + 0x44) = mac2;
 	//self->pci_device = (void *)netdev_info;
 	//self->pa_id = pa->pa_id;
+
+	for(i = 0; i < 6; i++)
+		smbios_uuid_igb_mac[i] = sc->hw.mac_addr[i];
 
 	INIT_DEBUGOUT("em_attach: end");
 	return;
@@ -2900,7 +2905,7 @@ static int cmd_set_mac(struct em_softc *sc, int ac, char *av[])
 		em_read_mac_addr(&sc->hw);
 		printf("MAC ADDRESS ");
 		printf("%s\n", ether_sprintf(sc->hw.mac_addr));
-		printf("Use \"ifconfig em0/1 setmac <mac> \"to set mac\n");
+		printf("Use \"ifconfig igb0/1 setmac <mac> \"to set mac\n");
 		return 0;
 	}
 

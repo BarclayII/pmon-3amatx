@@ -217,7 +217,7 @@ printvar(name,value, cntp)
                 strcpy(name,"syn1.ipaddr");
         }
 #else 
-#if defined (LOONGSON_3ASINGLE) || defined (LOONGSON_3BSINGLE)
+#if	defined (LOONGSON_3ASERVER) || defined (LOONGSON_3BSERVER)|| defined (LOONGSON_3B1500)
 	if(strstr(name,"rte0.ipaddr")!=NULL)
         {
                 strcpy(name,"eth0.ipaddr");

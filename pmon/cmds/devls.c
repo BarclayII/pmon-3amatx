@@ -101,6 +101,7 @@ extern int optind;
 			strcpy(&dev->dv_xname,"eth1");
 		}
 #endif	
+#ifndef LOONGSON_3AMATX
 #if	defined (LOONGSON_3ASINGLE) || defined (LOONGSON_3BSINGLE)
 #if defined LOONGSON_3B1500
 		if(strstr(&dev->dv_xname,"em0")!=NULL)
@@ -112,6 +113,7 @@ extern int optind;
 		{	
 			strcpy(&dev->dv_xname,"eth0");
 		}
+#endif
 #endif
 #endif
 #if	defined (LOONGSON_3ASERVER) || defined (LOONGSON_3BSERVER)
