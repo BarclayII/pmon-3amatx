@@ -1401,7 +1401,9 @@ static int em_allocate_pci_resources(struct em_softc *sc)
 		return ENXIO;
 	}
 
+#ifndef LOONGSON_3AMATX
 	sc->osdep.dev = (struct device *)sc;
+#endif
 	sc->hw.back = &sc->osdep;
 
 	intrstr = pci_intr_string(pc, ih);
@@ -1461,6 +1463,9 @@ static void em_free_pci_resources(struct em_softc *sc)
 			sc->osdep.mem_bus_space_handle,
 			sc->osdep.em_memsize);
 	sc->osdep.em_membase = 0;
+
+	/* delete the interrupt of NIC in PMON */
+	pci_intr_delete(IPL_NET);
 }
 
 /*********************************************************************

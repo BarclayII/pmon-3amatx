@@ -74,6 +74,24 @@ tgt_poll_register(level, func, arg)
 	return(newpoll);
 }
 
+struct poll_handle *tgt_poll_delete(int level)
+{
+	struct poll_handle *outpoll;
+
+	while (poll_list) {
+		if (poll_list->level == 1) {
+			break;
+		}
+		poll_list = poll_list->next;
+	}
+	outpoll = poll_list;
+	poll_list= poll_list->next;
+
+	free(outpoll);
+
+	return poll_list;
+}
+
 void
 tgt_poll()
 {
