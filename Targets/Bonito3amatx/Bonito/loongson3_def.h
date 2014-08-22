@@ -125,6 +125,22 @@ sb		v1,		0(v0); \
 nop; \
 nop
 
+#define PM2IOREAD(x) \
+li	v0, 0xb8000cd0; \
+li	v1, x; \
+sb	v1, 0(v0); \
+lb	a2, 1(v0); \
+nop; \
+nop;
+
+#define PM2IOWRITE(x) \
+li	v0, 0xb8000cd0; \
+li	v1, x; \
+sb	v1, 0(v0); \
+sb	a2, 1(v0); \
+nop; \
+nop;
+
 #define CONFIG_CACHE_64K_4WAY 1
 
 #define tmpsize		s1

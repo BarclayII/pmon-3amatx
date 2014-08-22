@@ -3,6 +3,35 @@
 
 #include "sb700_smbus.c"
 
+/* S3 basic register opration */
+void s3_reg_resume(void)
+{
+	u8 byte;
+	byte = 0;
+/* Enableing GPIO32 pull function */
+	printf("Enableing GPIO32 Pull down/up Resistor\n");
+	byte = pm2_ioread(0xE8);
+	/* Pull up */
+	byte &= ~(1 << 0);
+	byte &= ~(1 << 4);
+	pm2_iowrite(0xE8, byte);
+	delay(2000);
+}
+
+void s3_reg_down(void)
+{
+	u8 byte;
+	byte = 0;
+/* Enableing GPIO32 pull function */
+	printf("Enableing GPIO32 Pull down\n");
+	byte = pm2_ioread(0xE8);
+	/* Pull down */
+	byte |= (1 << 0);
+	byte |= (1 << 4);
+	pm2_iowrite(0xE8, byte);
+	delay(2000);
+}
+
 /*
 * SB600 enables all USB controllers by default in SMBUS Control.
 * SB600 enables SATA by default in SMBUS Control.
@@ -217,6 +246,10 @@ static void sm_init(device_t dev)
 	byte &= ~(1 << 1);
 	pm_iowrite(0x59, byte);
 #endif
+
+	/* It only will be used on 3AMATX */
+	printf("Pull down the gpio32\n");
+	s3_reg_resume();
 
 #if 1
 	/* Enable NbSb virtual channel */

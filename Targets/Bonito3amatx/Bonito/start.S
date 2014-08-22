@@ -165,6 +165,12 @@ ext_map_and_reboot:
 		jalr v0
 		nop
 #endif
+	/* Pull down the GPIO32 to keep mem vol */
+	PM2IOREAD(0xe8)
+	or	a2, a2, 0x1
+	or	a2, a2, 0x10
+	PM2IOWRITE(0xe8)
+
 	/* Save Resume Flag */
 	li  t0,0xa000c010
 	li  t1,0x12345678

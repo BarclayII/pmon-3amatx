@@ -680,6 +680,11 @@ void check_str()
 			   *(addr+i));
 	}
 #endif
+
+	tgt_printf("GPIO resume\r\n");
+	delay(20000);
+	s3_reg_resume();
+	delay(20000);
 	tgt_printf("SuperIO ReInit\r\n");
 	superio_reinit();
 	tgt_printf("Interrupt Reallocate\r\n");
