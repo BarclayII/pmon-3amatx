@@ -1,8 +1,7 @@
 TARGET=Bonito3amatx
 TARGETEL=Bonito
 START=start.o
-MEMSIZE=4
+MEMSIZE=128
 ZLOADER_OPTIONS=-mips3
 
-GZROMSTARTADDR=0xffffffff80300000
 include Makefile.inc
