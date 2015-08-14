@@ -133,7 +133,7 @@ cfg:
 	perl -i -ne 'print;exit if(/^# DO NOT DELETE/);' ../lib/libm/Makefile 
 	perl -i -ne 'print;exit if(/^# DO NOT DELETE/);' ../lib/libz/Makefile 
 	mkdir -p ../Targets/${TARGET}/compile
-	cd ../Targets/${TARGET}/conf/;pmoncfg ${TARGETEL}
+	cd ../Targets/${TARGET}/conf/;../../../tools/pmoncfg/pmoncfg ${TARGETEL}
 	make -C ../Targets/${TARGET}/compile/${TARGETEL}/ depend clean
 recfg:
 	vi ../Targets/${TARGET}/conf/$(TARGETEL)

@@ -61,363 +61,363 @@ ${OBJDIR}/lib${LIB}.a: ${OBJS}
 
 # DO NOT DELETE
 
-w_acos.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-w_acos.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-w_acos.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-w_acos.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-w_acos.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-w_acos.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-w_acos.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-w_acos.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-w_acos.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-w_asin.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-w_asin.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-w_asin.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-w_asin.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-w_asin.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-w_asin.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-w_asin.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-w_asin.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-w_asin.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-s_atan.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-s_atan.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-s_atan.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-s_atan.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-s_atan.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-s_atan.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-s_atan.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-s_atan.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-s_atan.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-w_atan2.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-w_atan2.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-w_atan2.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-w_atan2.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-w_atan2.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-w_atan2.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-w_atan2.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-w_atan2.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-w_atan2.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-s_ceil.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-s_ceil.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-s_ceil.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-s_ceil.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-s_ceil.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-s_ceil.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-s_ceil.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-s_ceil.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-s_ceil.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-s_cos.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-s_cos.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-s_cos.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-s_cos.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-s_cos.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-s_cos.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-s_cos.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-s_cos.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-s_cos.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-w_cosh.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-w_cosh.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-w_cosh.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-w_cosh.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-w_cosh.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-w_cosh.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-w_cosh.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-w_cosh.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-w_cosh.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-w_exp.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-w_exp.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-w_exp.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-w_exp.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-w_exp.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-w_exp.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-w_exp.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-w_exp.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-w_exp.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-s_expm1.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-s_expm1.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-s_expm1.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-s_expm1.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-s_expm1.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-s_expm1.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-s_expm1.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-s_expm1.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-s_expm1.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-s_fabs.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-s_fabs.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-s_fabs.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-s_fabs.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-s_fabs.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-s_fabs.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-s_fabs.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-s_fabs.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-s_fabs.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-s_floor.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-s_floor.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-s_floor.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-s_floor.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-s_floor.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-s_floor.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-s_floor.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-s_floor.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-s_floor.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-w_fmod.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-w_fmod.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-w_fmod.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-w_fmod.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-w_fmod.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-w_fmod.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-w_fmod.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-w_fmod.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-w_fmod.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-s_frexp.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-s_frexp.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-s_frexp.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-s_frexp.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-s_frexp.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-s_frexp.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-s_frexp.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-s_frexp.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-s_frexp.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-w_log.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-w_log.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-w_log.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-w_log.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-w_log.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-w_log.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-w_log.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-w_log.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-w_log.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-w_log10.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-w_log10.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-w_log10.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-w_log10.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-w_log10.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-w_log10.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-w_log10.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-w_log10.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-w_log10.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-s_modf.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-s_modf.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-s_modf.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-s_modf.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-s_modf.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-s_modf.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-s_modf.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-s_modf.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-s_modf.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-w_pow.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-w_pow.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-w_pow.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-w_pow.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-w_pow.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-w_pow.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-w_pow.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-w_pow.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-w_pow.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-s_sin.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-s_sin.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-s_sin.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-s_sin.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-s_sin.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-s_sin.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-s_sin.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-s_sin.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-s_sin.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-w_sinh.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-w_sinh.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-w_sinh.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-w_sinh.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-w_sinh.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-w_sinh.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-w_sinh.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-w_sinh.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-w_sinh.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-w_sqrt.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-w_sqrt.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-w_sqrt.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-w_sqrt.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-w_sqrt.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-w_sqrt.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-w_sqrt.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-w_sqrt.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-w_sqrt.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-s_tan.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-s_tan.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-s_tan.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-s_tan.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-s_tan.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-s_tan.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-s_tan.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-s_tan.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-s_tan.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-s_tanh.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-s_tanh.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-s_tanh.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-s_tanh.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-s_tanh.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-s_tanh.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-s_tanh.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-s_tanh.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-s_tanh.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-s_scalbn.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-s_scalbn.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-s_scalbn.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-s_scalbn.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-s_scalbn.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-s_scalbn.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-s_scalbn.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-s_scalbn.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-s_scalbn.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-s_copysign.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-s_copysign.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-s_copysign.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-s_copysign.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-s_copysign.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-s_copysign.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-s_copysign.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-s_copysign.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-s_copysign.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-e_acos.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-e_acos.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-e_acos.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-e_acos.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-e_acos.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-e_acos.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-e_acos.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-e_acos.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-e_acos.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-e_asin.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-e_asin.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-e_asin.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-e_asin.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-e_asin.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-e_asin.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-e_asin.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-e_asin.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-e_asin.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-e_atan2.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-e_atan2.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-e_atan2.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-e_atan2.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-e_atan2.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-e_atan2.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-e_atan2.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-e_atan2.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-e_atan2.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-k_cos.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-k_cos.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-k_cos.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-k_cos.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-k_cos.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-k_cos.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-k_cos.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-k_cos.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-k_cos.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-e_cosh.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-e_cosh.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-e_cosh.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-e_cosh.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-e_cosh.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-e_cosh.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-e_cosh.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-e_cosh.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-e_cosh.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-e_exp.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-e_exp.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-e_exp.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-e_exp.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-e_exp.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-e_exp.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-e_exp.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-e_exp.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-e_exp.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-e_fmod.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-e_fmod.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-e_fmod.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-e_fmod.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-e_fmod.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-e_fmod.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-e_fmod.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-e_fmod.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-e_fmod.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-e_log.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-e_log.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-e_log.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-e_log.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-e_log.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-e_log.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-e_log.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-e_log.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-e_log.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-e_log10.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-e_log10.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-e_log10.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-e_log10.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-e_log10.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-e_log10.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-e_log10.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-e_log10.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-e_log10.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-e_pow.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-e_pow.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-e_pow.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-e_pow.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-e_pow.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-e_pow.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-e_pow.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-e_pow.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-e_pow.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-k_sin.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-k_sin.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-k_sin.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-k_sin.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-k_sin.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-k_sin.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-k_sin.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-k_sin.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-k_sin.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-e_sinh.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-e_sinh.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-e_sinh.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-e_sinh.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-e_sinh.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-e_sinh.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-e_sinh.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-e_sinh.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-e_sinh.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-e_sqrt.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-e_sqrt.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-e_sqrt.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-e_sqrt.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-e_sqrt.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-e_sqrt.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-e_sqrt.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-e_sqrt.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-e_sqrt.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-k_tan.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-k_tan.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-k_tan.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-k_tan.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-k_tan.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-k_tan.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-k_tan.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-k_tan.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-k_tan.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-e_rem_pio2.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-e_rem_pio2.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-e_rem_pio2.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-e_rem_pio2.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-e_rem_pio2.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-e_rem_pio2.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-e_rem_pio2.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-e_rem_pio2.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-e_rem_pio2.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
-k_rem_pio2.o: /home/cm/Desktop/pmon-loongson3/include/math.h math_private.h
-k_rem_pio2.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-k_rem_pio2.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-k_rem_pio2.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-k_rem_pio2.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-k_rem_pio2.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-k_rem_pio2.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-k_rem_pio2.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-k_rem_pio2.o: /home/cm/Desktop/pmon-loongson3/sys/arch/mips/include/endian.h
+w_acos.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+w_acos.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+w_acos.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+w_acos.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+w_acos.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+w_acos.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+w_acos.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+w_acos.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+w_acos.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+w_asin.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+w_asin.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+w_asin.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+w_asin.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+w_asin.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+w_asin.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+w_asin.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+w_asin.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+w_asin.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+s_atan.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+s_atan.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+s_atan.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+s_atan.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+s_atan.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+s_atan.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+s_atan.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+s_atan.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+s_atan.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+w_atan2.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+w_atan2.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+w_atan2.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+w_atan2.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+w_atan2.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+w_atan2.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+w_atan2.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+w_atan2.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+w_atan2.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+s_ceil.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+s_ceil.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+s_ceil.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+s_ceil.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+s_ceil.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+s_ceil.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+s_ceil.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+s_ceil.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+s_ceil.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+s_cos.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+s_cos.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+s_cos.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+s_cos.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+s_cos.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+s_cos.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+s_cos.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+s_cos.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+s_cos.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+w_cosh.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+w_cosh.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+w_cosh.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+w_cosh.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+w_cosh.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+w_cosh.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+w_cosh.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+w_cosh.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+w_cosh.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+w_exp.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+w_exp.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+w_exp.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+w_exp.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+w_exp.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+w_exp.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+w_exp.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+w_exp.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+w_exp.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+s_expm1.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+s_expm1.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+s_expm1.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+s_expm1.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+s_expm1.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+s_expm1.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+s_expm1.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+s_expm1.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+s_expm1.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+s_fabs.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+s_fabs.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+s_fabs.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+s_fabs.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+s_fabs.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+s_fabs.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+s_fabs.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+s_fabs.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+s_fabs.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+s_floor.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+s_floor.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+s_floor.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+s_floor.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+s_floor.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+s_floor.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+s_floor.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+s_floor.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+s_floor.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+w_fmod.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+w_fmod.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+w_fmod.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+w_fmod.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+w_fmod.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+w_fmod.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+w_fmod.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+w_fmod.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+w_fmod.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+s_frexp.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+s_frexp.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+s_frexp.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+s_frexp.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+s_frexp.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+s_frexp.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+s_frexp.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+s_frexp.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+s_frexp.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+w_log.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+w_log.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+w_log.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+w_log.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+w_log.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+w_log.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+w_log.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+w_log.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+w_log.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+w_log10.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+w_log10.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+w_log10.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+w_log10.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+w_log10.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+w_log10.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+w_log10.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+w_log10.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+w_log10.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+s_modf.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+s_modf.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+s_modf.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+s_modf.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+s_modf.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+s_modf.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+s_modf.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+s_modf.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+s_modf.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+w_pow.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+w_pow.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+w_pow.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+w_pow.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+w_pow.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+w_pow.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+w_pow.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+w_pow.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+w_pow.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+s_sin.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+s_sin.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+s_sin.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+s_sin.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+s_sin.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+s_sin.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+s_sin.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+s_sin.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+s_sin.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+w_sinh.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+w_sinh.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+w_sinh.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+w_sinh.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+w_sinh.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+w_sinh.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+w_sinh.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+w_sinh.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+w_sinh.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+w_sqrt.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+w_sqrt.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+w_sqrt.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+w_sqrt.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+w_sqrt.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+w_sqrt.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+w_sqrt.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+w_sqrt.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+w_sqrt.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+s_tan.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+s_tan.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+s_tan.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+s_tan.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+s_tan.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+s_tan.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+s_tan.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+s_tan.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+s_tan.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+s_tanh.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+s_tanh.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+s_tanh.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+s_tanh.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+s_tanh.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+s_tanh.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+s_tanh.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+s_tanh.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+s_tanh.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+s_scalbn.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+s_scalbn.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+s_scalbn.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+s_scalbn.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+s_scalbn.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+s_scalbn.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+s_scalbn.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+s_scalbn.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+s_scalbn.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+s_copysign.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+s_copysign.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+s_copysign.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+s_copysign.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+s_copysign.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+s_copysign.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+s_copysign.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+s_copysign.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+s_copysign.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+e_acos.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+e_acos.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+e_acos.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+e_acos.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+e_acos.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+e_acos.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+e_acos.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+e_acos.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+e_acos.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+e_asin.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+e_asin.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+e_asin.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+e_asin.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+e_asin.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+e_asin.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+e_asin.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+e_asin.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+e_asin.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+e_atan2.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+e_atan2.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+e_atan2.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+e_atan2.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+e_atan2.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+e_atan2.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+e_atan2.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+e_atan2.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+e_atan2.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+k_cos.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+k_cos.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+k_cos.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+k_cos.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+k_cos.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+k_cos.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+k_cos.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+k_cos.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+k_cos.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+e_cosh.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+e_cosh.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+e_cosh.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+e_cosh.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+e_cosh.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+e_cosh.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+e_cosh.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+e_cosh.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+e_cosh.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+e_exp.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+e_exp.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+e_exp.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+e_exp.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+e_exp.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+e_exp.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+e_exp.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+e_exp.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+e_exp.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+e_fmod.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+e_fmod.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+e_fmod.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+e_fmod.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+e_fmod.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+e_fmod.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+e_fmod.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+e_fmod.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+e_fmod.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+e_log.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+e_log.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+e_log.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+e_log.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+e_log.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+e_log.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+e_log.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+e_log.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+e_log.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+e_log10.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+e_log10.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+e_log10.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+e_log10.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+e_log10.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+e_log10.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+e_log10.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+e_log10.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+e_log10.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+e_pow.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+e_pow.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+e_pow.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+e_pow.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+e_pow.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+e_pow.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+e_pow.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+e_pow.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+e_pow.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+k_sin.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+k_sin.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+k_sin.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+k_sin.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+k_sin.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+k_sin.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+k_sin.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+k_sin.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+k_sin.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+e_sinh.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+e_sinh.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+e_sinh.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+e_sinh.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+e_sinh.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+e_sinh.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+e_sinh.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+e_sinh.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+e_sinh.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+e_sqrt.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+e_sqrt.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+e_sqrt.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+e_sqrt.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+e_sqrt.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+e_sqrt.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+e_sqrt.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+e_sqrt.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+e_sqrt.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+k_tan.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+k_tan.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+k_tan.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+k_tan.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+k_tan.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+k_tan.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+k_tan.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+k_tan.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+k_tan.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+e_rem_pio2.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+e_rem_pio2.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+e_rem_pio2.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+e_rem_pio2.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+e_rem_pio2.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+e_rem_pio2.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+e_rem_pio2.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+e_rem_pio2.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+e_rem_pio2.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h
+k_rem_pio2.o: /home/gq/Loongson/pmon-3amatx/include/math.h math_private.h
+k_rem_pio2.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+k_rem_pio2.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+k_rem_pio2.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+k_rem_pio2.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+k_rem_pio2.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+k_rem_pio2.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+k_rem_pio2.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+k_rem_pio2.o: /home/gq/Loongson/pmon-3amatx/sys/arch/mips/include/endian.h

@@ -63,79 +63,79 @@ ${OBJDIR}/lib${LIB}.a: ${OBJS}
 adler32.o: zlib.h zconf.h
 crc32.o: zlib.h zconf.h
 infblock.o: zutil.h zlib.h zconf.h
-infblock.o: /home/cm/Desktop/pmon-loongson3/include/stddef.h
-infblock.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-infblock.o: /home/cm/Desktop/pmon-loongson3/include/string.h
-infblock.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-infblock.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-infblock.o: /home/cm/Desktop/pmon-loongson3/include/stdlib.h
-infblock.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-infblock.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-infblock.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-infblock.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-infblock.o: /home/cm/Desktop/pmon-loongson3/include/errno.h infblock.h
+infblock.o: /home/gq/Loongson/pmon-3amatx/include/stddef.h
+infblock.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+infblock.o: /home/gq/Loongson/pmon-3amatx/include/string.h
+infblock.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+infblock.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+infblock.o: /home/gq/Loongson/pmon-3amatx/include/stdlib.h
+infblock.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+infblock.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+infblock.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+infblock.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+infblock.o: /home/gq/Loongson/pmon-3amatx/include/errno.h infblock.h
 infblock.o: inftrees.h infcodes.h infutil.h
 infcodes.o: zutil.h zlib.h zconf.h
-infcodes.o: /home/cm/Desktop/pmon-loongson3/include/stddef.h
-infcodes.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-infcodes.o: /home/cm/Desktop/pmon-loongson3/include/string.h
-infcodes.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-infcodes.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-infcodes.o: /home/cm/Desktop/pmon-loongson3/include/stdlib.h
-infcodes.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-infcodes.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-infcodes.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-infcodes.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-infcodes.o: /home/cm/Desktop/pmon-loongson3/include/errno.h inftrees.h
+infcodes.o: /home/gq/Loongson/pmon-3amatx/include/stddef.h
+infcodes.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+infcodes.o: /home/gq/Loongson/pmon-3amatx/include/string.h
+infcodes.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+infcodes.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+infcodes.o: /home/gq/Loongson/pmon-3amatx/include/stdlib.h
+infcodes.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+infcodes.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+infcodes.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+infcodes.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+infcodes.o: /home/gq/Loongson/pmon-3amatx/include/errno.h inftrees.h
 infcodes.o: infblock.h infcodes.h infutil.h inffast.h
 inffast.o: zutil.h zlib.h zconf.h
-inffast.o: /home/cm/Desktop/pmon-loongson3/include/stddef.h
-inffast.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-inffast.o: /home/cm/Desktop/pmon-loongson3/include/string.h
-inffast.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-inffast.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-inffast.o: /home/cm/Desktop/pmon-loongson3/include/stdlib.h
-inffast.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-inffast.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-inffast.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-inffast.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-inffast.o: /home/cm/Desktop/pmon-loongson3/include/errno.h inftrees.h
+inffast.o: /home/gq/Loongson/pmon-3amatx/include/stddef.h
+inffast.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+inffast.o: /home/gq/Loongson/pmon-3amatx/include/string.h
+inffast.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+inffast.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+inffast.o: /home/gq/Loongson/pmon-3amatx/include/stdlib.h
+inffast.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+inffast.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+inffast.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+inffast.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+inffast.o: /home/gq/Loongson/pmon-3amatx/include/errno.h inftrees.h
 inffast.o: infblock.h infcodes.h infutil.h inffast.h
 inflate.o: zutil.h zlib.h zconf.h
-inflate.o: /home/cm/Desktop/pmon-loongson3/include/stddef.h
-inflate.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-inflate.o: /home/cm/Desktop/pmon-loongson3/include/string.h
-inflate.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-inflate.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-inflate.o: /home/cm/Desktop/pmon-loongson3/include/stdlib.h
-inflate.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-inflate.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-inflate.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-inflate.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-inflate.o: /home/cm/Desktop/pmon-loongson3/include/errno.h infblock.h
+inflate.o: /home/gq/Loongson/pmon-3amatx/include/stddef.h
+inflate.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+inflate.o: /home/gq/Loongson/pmon-3amatx/include/string.h
+inflate.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+inflate.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+inflate.o: /home/gq/Loongson/pmon-3amatx/include/stdlib.h
+inflate.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+inflate.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+inflate.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+inflate.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+inflate.o: /home/gq/Loongson/pmon-3amatx/include/errno.h infblock.h
 inftrees.o: zutil.h zlib.h zconf.h
-inftrees.o: /home/cm/Desktop/pmon-loongson3/include/stddef.h
-inftrees.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-inftrees.o: /home/cm/Desktop/pmon-loongson3/include/string.h
-inftrees.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-inftrees.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-inftrees.o: /home/cm/Desktop/pmon-loongson3/include/stdlib.h
-inftrees.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-inftrees.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-inftrees.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-inftrees.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-inftrees.o: /home/cm/Desktop/pmon-loongson3/include/errno.h inftrees.h
+inftrees.o: /home/gq/Loongson/pmon-3amatx/include/stddef.h
+inftrees.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+inftrees.o: /home/gq/Loongson/pmon-3amatx/include/string.h
+inftrees.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+inftrees.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+inftrees.o: /home/gq/Loongson/pmon-3amatx/include/stdlib.h
+inftrees.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+inftrees.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+inftrees.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+inftrees.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+inftrees.o: /home/gq/Loongson/pmon-3amatx/include/errno.h inftrees.h
 inftrees.o: inffixed.h
 infutil.o: zutil.h zlib.h zconf.h
-infutil.o: /home/cm/Desktop/pmon-loongson3/include/stddef.h
-infutil.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/ansi.h
-infutil.o: /home/cm/Desktop/pmon-loongson3/include/string.h
-infutil.o: /home/cm/Desktop/pmon-loongson3/sys/sys/cdefs.h
-infutil.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/cdefs.h
-infutil.o: /home/cm/Desktop/pmon-loongson3/include/stdlib.h
-infutil.o: /home/cm/Desktop/pmon-loongson3/sys/sys/types.h
-infutil.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/types.h
-infutil.o: /home/cm/Desktop/pmon-loongson3/Targets/Bonito3c780e/compile/Bonito/machine/endian.h
-infutil.o: /home/cm/Desktop/pmon-loongson3/sys/sys/endian.h
-infutil.o: /home/cm/Desktop/pmon-loongson3/include/errno.h infblock.h
+infutil.o: /home/gq/Loongson/pmon-3amatx/include/stddef.h
+infutil.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/ansi.h
+infutil.o: /home/gq/Loongson/pmon-3amatx/include/string.h
+infutil.o: /home/gq/Loongson/pmon-3amatx/sys/sys/cdefs.h
+infutil.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/cdefs.h
+infutil.o: /home/gq/Loongson/pmon-3amatx/include/stdlib.h
+infutil.o: /home/gq/Loongson/pmon-3amatx/sys/sys/types.h
+infutil.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/types.h
+infutil.o: /home/gq/Loongson/pmon-3amatx/Targets/Bonito3amatx/compile/Bonito/machine/endian.h
+infutil.o: /home/gq/Loongson/pmon-3amatx/sys/sys/endian.h
+infutil.o: /home/gq/Loongson/pmon-3amatx/include/errno.h infblock.h
 infutil.o: inftrees.h infcodes.h infutil.h

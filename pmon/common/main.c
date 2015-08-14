@@ -384,10 +384,43 @@ void __gccmain(void)
 {
 }
 
+typedef void (*entry_t)();
+
 int
 main()
 {
 	char prompt[32];
+	unsigned char mbr[512];
+	int i;
+	int fd = open("/dev/disk/wd0", 0);
+	entry_t entry;
+	if (fd == -1) {
+		printf("Error while opening /dev/disk/wd0");
+		goto loongson_original;
+	}
+
+	if (read(fd, mbr, 512) == -1) {
+		printf("Error while reading /dev/disk/wd0");
+		close(fd);
+		goto loongson_original;
+	}
+
+	for (i = 0; i < 512; ++i) {
+		printf("%02x%c", mbr[i] & 0xff, (i + 1) % 16 ? ' ' : '\n');
+	}
+
+	printf("open: %08x\n", open);
+	printf("close: %08x\n", close);
+	printf("read: %08x\n", read);
+	printf("puts: %08x\n", puts);
+
+	unsigned char *pos = (unsigned char *)0x80100000;
+	memcpy(pos, mbr, 512);
+
+	entry = (entry_t)pos;
+	entry(open, close, read, lseek);
+
+loongson_original:
 
 #ifdef ARB_LEVEL
 	save_board_ddrparam(0);
