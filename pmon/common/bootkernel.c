@@ -36,8 +36,107 @@
 #include <machine/cpu.h>
 #endif
 
+#include "elf.h"
+
 extern int errno;                       /* global error number */
 extern char *heaptop;
+
+typedef void (*entry_t)();
+
+int findsect(int fd, unsigned int sector)
+{
+	unsigned int seeklimit = 0x40000000;
+	unsigned int sectorlimit = seeklimit / 512;
+
+	if (lseek(fd, 0, SEEK_SET) == -1)
+		return -1;
+	for (; sector > sectorlimit; sector -= sectorlimit) {
+		if (lseek(fd, seeklimit, SEEK_CUR) == -1)
+			return -1;
+	}
+	return lseek(fd, sector * 512, SEEK_CUR) == -1 ? -1 : 0;
+}
+
+void boot_custom_kernel(int fd, unsigned char *mbr)
+{
+	if (fd == -1) {
+		printf("Open failed\n");
+		return;
+	}
+	entry_t entry;
+	int i, phnum;
+
+	unsigned int sector_start;
+	unsigned int pos = 0;
+
+	unsigned char *buf = (unsigned char *)0x80180000;
+
+	unsigned char *part1 = mbr + 0x1ce;
+	printf("part1: %08x\n", part1);
+	printf("mbr: %08x\n", mbr);
+	for (i = 0; i < 512; ++i) {
+		printf("%02x%c", mbr[i] & 0xff, (i + 1) % 16 ? ' ' : '\n');
+	}
+
+	printf("reading %08x\n", part1 + 0x8);
+	sector_start = *(unsigned short *)(part1 + 0xa);
+	sector_start = (sector_start << 16) + *(unsigned short *)(part1 + 0x8);
+	printf("sector start: %x\n", sector_start);
+
+	if (findsect(fd, sector_start) == -1) {
+		printf("find sector failed\n");
+		return;
+	}
+
+	if (read(fd, buf, sizeof(struct elf64hdr)) == -1) {
+		printf("read failed\n");
+		return;
+	}
+	if (*(unsigned int *)buf != 0x464c457f) {
+		printf("ELF MAGIC DOES NOT MATCH\n");
+		return;
+	}
+	pos += sizeof(struct elf64hdr);
+
+	struct elf64hdr *eh = (struct elf64hdr *)buf;
+
+	phnum = eh->e_phnum;
+	entry = (entry_t)(eh->e_entry);
+	printf("# of program headers: %d\n", phnum);
+	printf("entry address: %x\n", (unsigned int)entry);
+
+	for (i = 0; i < phnum; ++i) {
+		read(fd, buf, sizeof(struct elf64_phdr));
+		pos += sizeof(struct elf64_phdr);
+		printf("position: %x\n", pos);
+		struct elf64_phdr *ph = (struct elf64_phdr *)buf;
+		if (ph->p_type == PT_LOAD) {
+			printf("Loadable segment %d\n", i);
+			printf("offset: %x\n", (int)(ph->p_offset));
+			printf("address: %x\n", (unsigned int)(ph->p_vaddr));
+			printf("file size: %x\n", (unsigned int)(ph->p_filesz));
+			int off = (unsigned int)(ph->p_offset) - pos;
+			if (lseek(fd, off, SEEK_CUR) == -1) {
+				printf("lseek failed\n");
+				return;
+			}
+			if (read(fd,
+			    (unsigned char *)(ph->p_vaddr),
+			    ph->p_filesz) == -1) {
+				printf("read failed\n");
+				return;
+			}
+			if (lseek(fd, -off, SEEK_CUR) == -1) {
+				printf("lseek failed\n");
+				return;
+			}
+		}
+	}
+
+	(*entry)();
+}
+
+unsigned char mbr[512];
 
 int boot_kernel(const char* path, int flags, void* flashaddr, unsigned int offset)
 {
@@ -79,6 +178,39 @@ int boot_kernel(const char* path, int flags, void* flashaddr, unsigned int offse
 #endif
 	}
 #endif
+	int i;
+	int fd = open("/dev/disk/wd0", 0);
+	entry_t entry;
+	if (fd == -1) {
+		printf("Error while opening /dev/disk/wd0");
+		goto loongson_original;
+	}
+
+	if (read(fd, mbr, 512) == -1) {
+		printf("Error while reading /dev/disk/wd0");
+		close(fd);
+		goto loongson_original;
+	}
+
+	for (i = 0; i < 512; ++i) {
+		printf("%02x%c", mbr[i] & 0xff, (i + 1) % 16 ? ' ' : '\n');
+	}
+	close(fd);
+
+	printf("open: %08x\n", open);
+	printf("close: %08x\n", close);
+	printf("read: %08x\n", read);
+	printf("puts: %08x\n", puts);
+	unsigned char *pos = (unsigned char *)0x80100000;
+	memcpy(pos, mbr, 512);
+	fd = open("/dev/disk/wd0", 0);
+#if 1
+	entry = (entry_t)pos;
+	entry(fd, findsect, read, lseek);
+#else
+	boot_custom_kernel(fd, pos);
+#endif
+loongson_original:
 	dl_initialise (offset, flags);
 
 	fprintf (stderr, "Loading file: %s ", path);
