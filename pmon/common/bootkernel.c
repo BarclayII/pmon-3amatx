@@ -57,6 +57,11 @@ int findsect(int fd, unsigned int sector)
 	return lseek(fd, sector * 512, SEEK_CUR) == -1 ? -1 : 0;
 }
 
+int printhex(unsigned int val)
+{
+	return printf("%x\n", val);
+}
+
 void boot_custom_kernel(int fd, unsigned char *mbr)
 {
 	if (fd == -1) {
@@ -197,10 +202,6 @@ int boot_kernel(const char* path, int flags, void* flashaddr, unsigned int offse
 	}
 	close(fd);
 
-	printf("open: %08x\n", open);
-	printf("close: %08x\n", close);
-	printf("read: %08x\n", read);
-	printf("puts: %08x\n", puts);
 	unsigned char *pos = (unsigned char *)0x80100000;
 	memcpy(pos, mbr, 512);
 	fd = open("/dev/disk/wd0", 0);
